@@ -1,0 +1,94 @@
+{
+	"info": {
+		"_postman_id": "a23c0f4a-4aa1-4493-ad12-b91b0350db4b",
+		"name": "Ecommerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SendProducer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/kafka/send",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"kafka",
+						"send"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addProduto",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"codproduto\": 686,\r\n    \"email\": \"Cesar\",\r\n    \"quantidade\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080//ecommerce/carrinho/add",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"",
+						"ecommerce",
+						"carrinho",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "checkoutProduto",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "Cesar",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080//ecommerce/carrinho/checkout",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"",
+						"ecommerce",
+						"carrinho",
+						"checkout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
